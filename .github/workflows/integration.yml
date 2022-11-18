@@ -26,5 +26,4 @@ jobs:
           vercel_app: 'vercel-preview-action-test'
       - name: Get URL
         run:
-          echo "https://${{ steps.vercel_preview_url_by_name.outputs.preview_url
-          }}"
+          echo "https://${{ steps.vercel_preview_url_by_name.outputs.preview_url}}"
