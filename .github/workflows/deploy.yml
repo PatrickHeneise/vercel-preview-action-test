@@ -3,7 +3,7 @@ name: Build & Deploy
 on:
   push:
   schedule:
-    - cron: "0 0 5 * *"
+    - cron: '0 0 5 * *'
 
 jobs:
   test:
@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for Vercel Preview URL
-      uses: zentered/vercel-preview-url@v1.1.1
-      id: vercel_preview_url
-      env:
-        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      with:
-        vercel_team_id: ""
-        vercel_project_id: "prj_VGsbMBHmakJlktyjWghOGD41eJEL"
+        uses: zentered/vercel-preview-url@v1.1.1
+        id: vercel_preview_url
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          vercel_team_id: ''
+          vercel_project_id: 'prj_VGsbMBHmakJlktyjWghOGD41eJEL'
