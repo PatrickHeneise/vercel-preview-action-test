@@ -1,4 +1,4 @@
-name: Integraton Test
+name: Integration Test
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
           node-version: 16
       - name: Wait for Vercel Preview URL with App Name
         id: vercel_preview_url_by_name
-        uses: zentered/vercel-preview-url@v1.1.2
+        uses: zentered/vercel-preview-url@v1.1.5
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           GITHUB_REF: 'main'
@@ -26,4 +26,5 @@ jobs:
           vercel_app: 'vercel-preview-action-test'
       - name: Get URL
         run:
-          echo "https://${{ steps.vercel_preview_url_by_name.outputs.preview_url}}"
+          echo "https://${{
+          steps.vercel_preview_url_by_name.outputs.preview_url}}"
