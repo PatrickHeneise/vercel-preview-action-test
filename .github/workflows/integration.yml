@@ -17,7 +17,7 @@ jobs:
           node-version: 18
       - name: Wait for Vercel Preview URL with App Name
         id: vercel_preview_url_by_name
-        uses: zentered/vercel-preview-url@v1.3.0
+        uses: zentered/vercel-preview-url@v1.4.0
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           GITHUB_REF: 'main'
